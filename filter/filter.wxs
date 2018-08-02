@@ -1,0 +1,24 @@
+var filter = {
+  filterName: function (arrObj) {
+    var _arrName = [];
+    if (!arrObj) return '';
+    for (var i = 0; i < arrObj.length; i++) {
+      _arrName.push(arrObj[i].name)
+    }
+    return _arrName.join('/')
+  },
+  filterCount: function(count) {
+    var _count = '';
+    if (count.toString().length < 5) {
+      _count = count
+    } else {
+      _count = (count / 10000).toFixed(0) + '万'
+    }
+    return _count;
+  }
+}
+
+module.exports = {
+  filterName: filter.filterName,
+  filterCount: filter.filterCount
+}

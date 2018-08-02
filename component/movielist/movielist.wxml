@@ -1,0 +1,18 @@
+<wxs module="fd" src="../../filter/filter.wxs"></wxs>
+<view class="movie-list-wrap">
+  <view class="movie-list-section" wx:for="{{movieList}}" wx:for-item="movie" wx:key="movie.id">
+    <view class="movie-list-item" bindtap="changePages">
+      <image src="{{movie.images.medium}}" mode="scaleToFill" class="movie-list-image"></image>
+    </view>
+    <view class="movie-list-item">
+      <view class="movie-title">{{movie.original_title}}</view>
+      <view class="movie-rating">5星</view>
+      <view class="movie-director">导演: {{fd.filterName(movie.directors)}}</view>
+      <view class="movie-actor">主演: {{fd.filterName(movie.casts)}}</view>
+    </view>
+    <view class="movie-list-item">
+      <text class="movie-watcher">{{fd.filterCount(movie.collect_count)}}人看过</text>
+      <view class="movie-picture-box">购票</view>
+    </view>
+  </view>
+</view>

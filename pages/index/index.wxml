@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-x="true" class="tab-h">
+    <view class="tab-item {{currentTab===0?'active':''}}" data-current="0" bindtap="swichNav">正在热映</view>
+    <view class="tab-item {{currentTab===1?'active':''}}" data-current="1" bindtap="swichNav">即将上映</view>
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item style="height:100%;">
+      <scroll-view scroll-y="true" class="tab-view">
+        <movie-list movieType="in_theaters"></movie-list>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class="tab-view">
+        <movie-list movieType="coming_soon"></movie-list>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

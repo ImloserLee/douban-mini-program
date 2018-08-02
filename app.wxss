@@ -1,0 +1,5 @@
+/**app.wxss**/
+@import './assets/iconfont/iconfont';
+.container {
+  box-sizing: border-box;
+} 
