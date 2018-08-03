@@ -1,7 +1,7 @@
 <wxs module="fd" src="../../filter/filter.wxs"></wxs>
 <view class="movie-list-wrap">
   <view class="movie-list-section" wx:for="{{movieList}}" wx:for-item="movie" wx:key="movie.id">
-    <view class="movie-list-item" bindtap="changePages">
+    <view class="movie-list-item" bindtap="changePages" data-set="{{movie.id}}">
       <image src="{{movie.images.medium}}" mode="scaleToFill" class="movie-list-image"></image>
     </view>
     <view class="movie-list-item">

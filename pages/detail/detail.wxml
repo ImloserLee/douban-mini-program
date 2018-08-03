@@ -1,2 +1,24 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class='detail-wrap'>
+  <view class='detail-bg'>
+    <view class='detail-image'>
+      <image src='{{detailData.images.small}}'></image>
+    </view>
+  </view>
+  <view class='detail-movie-info'>
+    <view class='detail-info'>
+      <text class='info-title'>{{detailData.title}}</text>
+      <text class='infoes'>2018/{{detailData.countries[0]}}/{{detailData.genres[0]}}</text>
+      <text class='infoes'>上映时间:{{detailData.pubdates[0]}}</text>
+      <text class='infoes'>片长:{{detailData.durations[0]}}</text>
+    </view>
+    <view class='detail-rate'>
+      <view class='rate-box'>
+        <text>豆瓣评分</text>
+        <text>{{detailData.rating.average}}</text>
+        <text>5星</text>
+        <text>{{detailData.ratings_count}}人</text>
+      </view>
+    </view>
+  </view>
+  <view>电影简介</view>
+</view>

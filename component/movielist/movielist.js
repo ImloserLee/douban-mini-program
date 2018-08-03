@@ -40,9 +40,10 @@ Component({
         }
       })
     },
-    changePages() {
+    changePages(e) {
+      const id = e.currentTarget.dataset.set;
       wx.navigateTo({
-        url: '../detail/detail',
+        url: '../detail/detail?id='+id,
       })
     }
   }

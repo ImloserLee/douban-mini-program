@@ -1,1 +1,54 @@
 /* pages/detail/detail.wxss */
+.detail-bg {
+  position: relative;
+  width: 100%;
+  height: 600rpx;
+  background: #7f6623;
+}
+.detail-bg .detail-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 500rpx;
+}
+
+.detail-bg .detail-image image {
+  width: 100%;
+  height: 100%;
+}
+.detail-movie-info {
+  display: flex;
+  width: 100%;
+  padding-top: 30rpx;
+}
+.detail-movie-info .detail-info {
+  padding-left: 30rpx;
+  flex: 1;
+}
+.detail-info text, .rate-box text {
+  display: block;
+}
+.detail-info .info-title {
+  margin-bottom: 20rpx;
+  font-size: 48rpx;
+}
+.detail-info .infoes {
+  font-size: 24rpx;
+  color: #b3b3b3;
+}
+.detail-movie-info .detail-rate {
+  position: relative;
+  flex: 1;
+  padding-right: 30rpx;
+}
+.detail-rate .rate-box {
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+  width: 200rpx;
+  height: 200rpx;
+  padding: 20rpx;
+  box-shadow: 2rpx 2rpx 20rpx #b3b3b3;
+}
