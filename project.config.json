@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.1",
 	"appid": "wx1dfe5f9a539e4d77",
-	"projectname": "workspace",
+	"projectname": "douban",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

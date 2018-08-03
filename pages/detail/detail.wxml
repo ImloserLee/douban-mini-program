@@ -1,4 +1,2 @@
 <!--pages/detail/detail.wxml-->
-<view>
-  影片详情介绍
-</view>
+<text>pages/detail/detail.wxml</text>
