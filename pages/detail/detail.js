@@ -13,6 +13,9 @@ Page({
    */
   onLoad: function (options) {
     let _this = this
+    wx.showLoading({
+      title: '加载中...',
+    })
     wx.request({
       url: `https://douban.uieee.com/v2/movie/subject/${options.id}`,
       method: 'GET',
@@ -21,9 +24,13 @@ Page({
       },
       success: function (res) {
         console.log(res)
+        wx.hideLoading()
         if (res.statusCode === 200) {
           _this.setData({
             detailData: res.data
+          })
+          wx.setNavigationBarTitle({
+            title: res.data.title
           })
         }
       }

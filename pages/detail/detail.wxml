@@ -13,12 +13,17 @@
     </view>
     <view class='detail-rate'>
       <view class='rate-box'>
-        <text>豆瓣评分</text>
-        <text>{{detailData.rating.average}}</text>
+        <text class='rate-title'>豆瓣评分</text>
+        <text class='rate-score'>{{detailData.rating.average}}</text>
         <text>5星</text>
-        <text>{{detailData.ratings_count}}人</text>
+        <text class='rate-person'>{{detailData.ratings_count}}人</text>
       </view>
     </view>
   </view>
-  <view>电影简介</view>
+  <view class='detail-introduce'>
+    <view class='introduce-title'>剧情简介</view>
+    <view class='introduce-content'>
+      <text>{{detailData.summary}}</text>
+    </view>
+  </view>
 </view>

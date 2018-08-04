@@ -32,6 +32,7 @@ Component({
           'Content-Type': 'application/text'
         },
         success: function(res) {
+          console.log(res)
           if (res.statusCode === 200) {
             _this.setData({
               movieList: res.data.subjects
